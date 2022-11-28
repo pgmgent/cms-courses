@@ -1,0 +1,14 @@
+{% extends "layouts/_columns" %}
+
+{% block left %}
+    Dit is linkercontent.
+{% endblock %}
+
+{% block right %}
+    Dit is rechtercontent.
+{% endblock %}
+
+{% block bottomScripts %}
+    {{ parent() }}
+    <script>console.log('Zware JS dat niet op alle paginas moet worden geladen.')</script>
+{% endblock %}

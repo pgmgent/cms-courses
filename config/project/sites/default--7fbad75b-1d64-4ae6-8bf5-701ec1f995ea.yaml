@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: nl-BE
+name: 'PGM Gent'
+primary: true
+siteGroup: 9d6023f5-7886-4299-a756-b4d90961c904 # PGM Gent
+sortOrder: 1

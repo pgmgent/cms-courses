@@ -1,0 +1,24 @@
+{% set navigationItems = [
+    {
+        title: 'Home',
+        url: '/'
+    },
+    {
+        title: 'About',
+        url: '/about'
+    },
+    {
+        title: 'Contact',
+        url: '/contact'
+    },
+] %}
+
+<nav>
+    <ul>
+        {% for navItem in navigationItems %}
+            <li>
+                <a href="{{ navItem.url }}">{{ navItem.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

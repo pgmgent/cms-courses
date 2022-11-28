@@ -1,0 +1,10 @@
+{% extends "layouts/_main" %}
+
+{% set list = ['Veld moet ingevuld zijn.', 'Wachtwoord moet minstens 8 tekens lang zijn.'] %}
+
+{% from 'macro/_errors' import errors %}
+
+{% block container %}
+    {{ errors(list) }}
+{% endblock %}
+

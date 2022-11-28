@@ -1,0 +1,30 @@
+dateModified: 1669113984
+email:
+  fromEmail: adriaan@pgm.gent
+  fromName: 'PGM Gent'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    7fbad75b-1d64-4ae6-8bf5-701ec1f995ea: 'PGM Gent' # PGM Gent
+    9d6023f5-7886-4299-a756-b4d90961c904: 'PGM Gent' # PGM Gent
+    48278a33-f3ca-4301-afda-73d485b628a3: Common # Common
+plugins:
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      assetPath: dist
+      publicPath: web
+system:
+  edition: solo
+  live: true
+  name: 'PGM Gent'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
