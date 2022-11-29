@@ -1,0 +1,7 @@
+description: 'Teachers will be able to add cases and edit courses.'
+handle: teachers
+name: Teachers
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accesssitewhensystemisoff

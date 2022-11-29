@@ -20,5 +20,16 @@
                 <a href="{{ navItem.url }}">{{ navItem.title }}</a>
             </li>
         {% endfor %}
+
+        {% if currentUser and currentUser.can('accessCp') %}
+            <li>
+                {% include "components/button-link" with {
+                    href: cpUrl(),
+                    label: 'dashboard' | t(params = {name: currentUser.friendlyName | capitalize})
+                } %}
+            </li>
+        {% endif %}
     </ul>
+
+    {% include "components/locale" %}
 </nav>

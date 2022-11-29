@@ -1,0 +1,26 @@
+description: 'An admin can do and change anything on the website.'
+handle: administrators
+name: Admins
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accesssitewhensystemisoff
+  - administrateusers
+  - 'assignusergroup:fc541612-4c9d-4034-a75a-a9cb9df1899e' # Admins
+  - assignuserpermissions
+  - deleteusers
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - performupdates
+  - registerusers
+  - 'utility:clear-caches'
+  - 'utility:db-backup'
+  - 'utility:deprecation-errors'
+  - 'utility:find-replace'
+  - 'utility:migrations'
+  - 'utility:php-info'
+  - 'utility:queue-manager'
+  - 'utility:system-messages'
+  - 'utility:system-report'
+  - 'utility:updates'

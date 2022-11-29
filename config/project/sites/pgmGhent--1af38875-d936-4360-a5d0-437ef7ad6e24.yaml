@@ -1,0 +1,9 @@
+baseUrl: $ENGLISH_SITE_URL
+enabled: '1'
+handle: pgmGhent
+hasUrls: true
+language: en
+name: 'PGM Ghent'
+primary: false
+siteGroup: 9d6023f5-7886-4299-a756-b4d90961c904 # PGM Gent
+sortOrder: 2

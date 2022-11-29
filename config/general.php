@@ -11,6 +11,23 @@
 use craft\config\GeneralConfig;
 use craft\helpers\App;
 
+return [
+    '*' => [
+        'defaultWeekStartDay' => 1,
+        'omitScriptNameInUrls' => true,
+        'allowAdminChanges' => App::env('ALLOW_ADMIN_CHANGES') ?? false,
+        'disallowRobots' => App::env('DISALLOW_ROBOTS') ?? false
+    ],
+    'dev' => [
+        'allowAdminChanges' => App::env('ALLOW_ADMIN_CHANGES') ?? true,
+        'devMode' => true
+    ],
+    'staging' => [],
+    'production' => [
+        'cpTrigger' => 'pgm-dashboard'
+    ],
+];
+
 return GeneralConfig::create()
     // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
     ->defaultWeekStartDay(1)

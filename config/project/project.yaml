@@ -1,13 +1,16 @@
-dateModified: 1669113984
+dateModified: 1669716631
 email:
   fromEmail: adriaan@pgm.gent
   fromName: 'PGM Gent'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    1af38875-d936-4360-a5d0-437ef7ad6e24: 'PGM Ghent' # PGM Ghent
     7fbad75b-1d64-4ae6-8bf5-701ec1f995ea: 'PGM Gent' # PGM Gent
     9d6023f5-7886-4299-a756-b4d90961c904: 'PGM Gent' # PGM Gent
     48278a33-f3ca-4301-afda-73d485b628a3: Common # Common
+    b8af73e6-f8b7-4866-8b48-4cc5f749751d: Teachers # Teachers
+    fc541612-4c9d-4034-a75a-a9cb9df1899e: Admins # Admins
 plugins:
   mix:
     edition: standard
@@ -17,14 +20,8 @@ plugins:
       assetPath: dist
       publicPath: web
 system:
-  edition: solo
+  edition: pro
   live: true
   name: 'PGM Gent'
   schemaVersion: 4.0.0.9
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true

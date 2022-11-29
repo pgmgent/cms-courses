@@ -1,0 +1,9 @@
+{% if href is defined and label is defined and label is not empty %}
+    <a
+        class="button button--primary"
+        href="{{ href }}"
+        target="{{ target ?? '_self' }}"
+        >
+        {{ label }}
+    </a>
+{% endif %}
