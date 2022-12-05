@@ -1,23 +1,23 @@
-{% set navigationItems = [
-    {
-        title: 'Home',
-        url: '/'
-    },
-    {
-        title: 'About',
-        url: '/about'
-    },
-    {
-        title: 'Contact',
-        url: '/contact'
-    },
-] %}
+{% set navigationItems = craft.entries.section('navigation').all() %}
 
 <nav>
     <ul>
         {% for navItem in navigationItems %}
             <li>
-                <a href="{{ navItem.url }}">{{ navItem.title }}</a>
+                {% if navItem.type == 'internal' %}
+                    {% include "components/button-link" with {
+                        label: navItem.title,
+                        href: navItem.entrySelector.one().url,
+                        modifier: navItem.buttonStyleSelector.value
+                    } %}
+                {% elseif navItem.type == 'external' %}
+                    {% include "components/button-link" with {
+                        label: navItem.title,
+                        href: navItem.externalLink,
+                        target: '_blank',
+                        modifier: navItem.buttonStyleSelector.value
+                    } %}
+                {% endif %}
             </li>
         {% endfor %}
 

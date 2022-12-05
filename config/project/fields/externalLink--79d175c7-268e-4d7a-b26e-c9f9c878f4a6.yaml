@@ -1,0 +1,14 @@
+columnSuffix: pflgdjwc
+contentColumnType: string(255)
+fieldGroup: 48278a33-f3ca-4301-afda-73d485b628a3 # Common
+handle: externalLink
+instructions: null
+name: 'External Link'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

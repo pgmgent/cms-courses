@@ -1,0 +1,67 @@
+fieldLayouts:
+  2fe36164-3ef4-4512-93a2-2b030ecd2042:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8fb1c976-d2f2-4dc2-9dd5-9c2ec98573f9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e68987c1-ae5a-48c5-a6f2-3031e10c903d # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef88ee73-a6ff-4cbd-9917-d1d5f3f28983
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d7b9dc9c-9659-4f7d-9c51-14765c4634f1 # Cases Selector
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 47e0f390-a32c-4335-969f-97bf8ac92a7c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 873d66ba-a53c-4b7b-bdb9-173da527c960
+        userCondition: null
+handle: casesPage
+hasTitleField: true
+name: 'Cases Page'
+section: 0ea98110-cff9-4d61-90a4-95aef918dbdf # Cases Page
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

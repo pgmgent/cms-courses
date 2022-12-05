@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 48278a33-f3ca-4301-afda-73d485b628a3 # Common
+handle: casesSelector
+instructions: 'Select cases.'
+name: 'Cases Selector'
+searchable: false
+settings:
+  allowSelfRelations: false
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: null
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:00c9e121-423e-4977-b259-c5095c743040' # Cases
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

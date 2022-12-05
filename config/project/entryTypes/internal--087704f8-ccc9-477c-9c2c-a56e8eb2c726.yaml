@@ -1,0 +1,67 @@
+fieldLayouts:
+  458b1256-5af3-458b-b82c-93c2f6126efe:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 41cf01f9-68c4-4317-87c9-46c695d44104
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3dde279e-f1f5-4b05-96b1-bdaae50a9719 # Entry Selector
+            instructions: null
+            label: 'Page selector'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9f48a259-1b90-4d54-aa9e-e1f9b23ee690
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b253e70b-f1db-4d43-98d2-178e2d6d523f # Button Style Selector
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5ca8857-8ac7-4bc4-b616-cd4e73db35c8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 960c27fc-3159-4066-b145-048b2338c491
+        userCondition: null
+handle: internal
+hasTitleField: true
+name: 'Internal Link'
+section: 385d0aa9-4485-4a80-9c4c-26817c3482df # Navigation
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
