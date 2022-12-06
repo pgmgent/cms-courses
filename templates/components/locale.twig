@@ -1,21 +1,23 @@
 {% set sites = craft.app.sites.getAllSites() %}
 
-<nav>
-    {% for site in sites %}
-        {% set isActive = currentSite.id is same as(site.id) %}
+{% if sites | length %}
+    <ul class="{{ classes ?? 'list' }}">
+        {% for site in sites %}
+            {% set isActive = currentSite.id is same as(site.id) %}
 
-        <li>
-            <a
-            {% if isActive %}
-                class="lang-item lang-item--active"
-                aria-current="page"
-            {% else %}
-                class="lang-item"
-            {% endif %}
-            href="{{ site.baseUrl }}">
-                {{ site.language | split('-') | first | upper }}
-            </a>
-        </li>
-    {% endfor %}
-</nav>
+            <li>
+                <a
+                {% if isActive %}
+                    class="lang-item lang-item--active"
+                    aria-current="page"
+                {% else %}
+                    class="lang-item"
+                {% endif %}
+                href="{{ site.baseUrl }}">
+                    {{ site.language | split('-') | first | upper }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 

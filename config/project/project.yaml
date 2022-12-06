@@ -1,8 +1,16 @@
-dateModified: 1670251582
+dateModified: 1670321823
 email:
   fromEmail: adriaan@pgm.gent
   fromName: 'PGM Gent'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: $UPLOAD_PATH
+    type: craft\fs\Local
+    url: $UPLOAD_URL
 meta:
   __names__:
     00c9e121-423e-4977-b259-c5095c743040: Cases # Cases
@@ -10,10 +18,17 @@ meta:
     1af38875-d936-4360-a5d0-437ef7ad6e24: 'PGM Ghent' # PGM Ghent
     3dde279e-f1f5-4b05-96b1-bdaae50a9719: 'Entry Selector' # Entry Selector
     6cdf173a-339c-4f65-b1cf-30a98d4baa98: 'Cases Page' # Cases Page
+    6dbfecc0-8db3-4b54-8c5f-a530f67f34ec: 'Small Image'
     7fbad75b-1d64-4ae6-8bf5-701ec1f995ea: 'PGM Gent' # PGM Gent
+    8f72a04f-beba-4965-be34-6889a44aa6a0: 'Text and image' # Text and image
     9d6023f5-7886-4299-a756-b4d90961c904: 'PGM Gent' # PGM Gent
+    22e059de-9831-40fb-aeca-36dc9a51edf0: Image # Image
+    63ad7adb-8a87-4961-80ee-c053d46995bf: Order # Order
+    070f3fc9-5315-4efe-aa44-b06fb99b7a1a: Image # Image
     79d175c7-268e-4d7a-b26e-c9f9c878f4a6: 'External Link' # External Link
+    161f01c5-d41c-48e6-97f6-41baa118b67c: Banner # Banner
     385d0aa9-4485-4a80-9c4c-26817c3482df: Navigation # Navigation
+    982c0797-a104-4e69-9f50-477ff6202a89: Branding # Branding
     48278a33-f3ca-4301-afda-73d485b628a3: Common # Common
     79541de8-894d-4788-b16f-a2692d8c35f0: 'Home Page' # Home Page
     85390e38-228d-4230-9d1d-f67dc15e3aed: Detail # Detail
@@ -21,10 +36,14 @@ meta:
     a1f2bc7e-94ac-410c-b80c-760f646cf23c: External # External
     b8af73e6-f8b7-4866-8b48-4cc5f749751d: Teachers # Teachers
     b253e70b-f1db-4d43-98d2-178e2d6d523f: 'Button Style Selector' # Button Style Selector
+    c1e51c36-1c4c-421c-b7e1-15bdf9d37c15: Images # Images
+    cd336d77-a9fc-409e-b734-36fb6418d586: WYSIWYG # WYSIWYG
     d7b9dc9c-9659-4f7d-9c51-14765c4634f1: 'Cases Selector' # Cases Selector
     e68987c1-ae5a-48c5-a6f2-3031e10c903d: Description # Description
     ea678ff1-35d7-463e-b7e9-8f3123f83314: 'External Link' # External Link
+    f0998072-e809-4af9-82bd-c986990b6c1b: Content # Content
     f2b7696c-a4bb-450f-bd2d-39b20fb1bb6b: 'Home Page' # Home Page
+    f3956f49-9876-4219-95f1-e50a5d448c4b: Image # Image
     fc541612-4c9d-4034-a75a-a9cb9df1899e: Admins # Admins
 plugins:
   mix:
@@ -34,6 +53,10 @@ plugins:
     settings:
       assetPath: dist
       publicPath: web
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: pro
   live: true

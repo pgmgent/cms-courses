@@ -1,35 +1,41 @@
 {% set navigationItems = craft.entries.section('navigation').all() %}
 
-<nav>
-    <ul>
-        {% for navItem in navigationItems %}
-            <li>
-                {% if navItem.type == 'internal' %}
-                    {% include "components/button-link" with {
-                        label: navItem.title,
-                        href: navItem.entrySelector.one().url,
-                        modifier: navItem.buttonStyleSelector.value
-                    } %}
-                {% elseif navItem.type == 'external' %}
-                    {% include "components/button-link" with {
-                        label: navItem.title,
-                        href: navItem.externalLink,
-                        target: '_blank',
-                        modifier: navItem.buttonStyleSelector.value
-                    } %}
-                {% endif %}
-            </li>
-        {% endfor %}
+<nav class="nav">
+    {% include "components/_logo" %}
 
-        {% if currentUser and currentUser.can('accessCp') %}
-            <li>
-                {% include "components/button-link" with {
-                    href: cpUrl(),
-                    label: 'dashboard' | t(params = {name: currentUser.friendlyName | capitalize})
-                } %}
-            </li>
-        {% endif %}
-    </ul>
+    <div class="nav__items">
+        <ul class="nav__list list">
+            {% for navItem in navigationItems %}
+                <li>
+                    {% if navItem.type == 'internal' %}
+                        {% set activeClass = navItem.entrySelector.one().url is same as(craft.app.request.absoluteUrl) ? 'button--active' : '' %}
 
-    {% include "components/locale" %}
+                        {% include "components/button-link" with {
+                            label: navItem.title,
+                            href: navItem.entrySelector.one().url,
+                            modifier: navItem.buttonStyleSelector.value~' '~activeClass
+                        } %}
+                    {% elseif navItem.type == 'external' %}
+                        {% include "components/button-link" with {
+                            label: navItem.title,
+                            href: navItem.externalLink,
+                            target: '_blank',
+                            modifier: navItem.buttonStyleSelector.value
+                        } %}
+                    {% endif %}
+                </li>
+            {% endfor %}
+
+            {% if currentUser and currentUser.can('accessCp') %}
+                <li class="nav__item">
+                    {% include "components/button-link" with {
+                        href: cpUrl(),
+                        label: 'dashboard' | t(params = {name: currentUser.friendlyName | capitalize})
+                    } %}
+                </li>
+            {% endif %}
+        </ul>
+
+        {% include "components/locale" %}
+    </div>
 </nav>

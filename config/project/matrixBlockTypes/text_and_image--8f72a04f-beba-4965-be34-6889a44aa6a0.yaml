@@ -1,0 +1,142 @@
+field: f0998072-e809-4af9-82bd-c986990b6c1b # Content
+fieldLayouts:
+  1964fa75-7e63-4cae-94e9-be0c450612f6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 070f3fc9-5315-4efe-aa44-b06fb99b7a1a # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 881796e7-9658-410e-abb3-8a9cd0f20058
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cd336d77-a9fc-409e-b734-36fb6418d586 # WYSIWYG
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb946b54-327a-4152-a7bd-a7625ad8a18e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 63ad7adb-8a87-4961-80ee-c053d46995bf # Order
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79e3b587-197b-4c4e-94bd-7032144fdba3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a39365f6-a4e2-4a7f-8ca9-918b98566e2d
+        userCondition: null
+fields:
+  63ad7adb-8a87-4961-80ee-c053d46995bf: # Order
+    columnSuffix: vvtdwzuo
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: order
+    instructions: 'Toggle this lightswitch if you want to reverse the order of the text and image. '
+    name: Order
+    searchable: false
+    settings:
+      default: false
+      offLabel: 'Image left and text right'
+      onLabel: 'Text left and image right'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  070f3fc9-5315-4efe-aa44-b06fb99b7a1a: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:c1e51c36-1c4c-421c-b7e1-15bdf9d37c15' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:c1e51c36-1c4c-421c-b7e1-15bdf9d37c15' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:c1e51c36-1c4c-421c-b7e1-15bdf9d37c15' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  cd336d77-a9fc-409e-b734-36fb6418d586: # WYSIWYG
+    columnSuffix: lorevhme
+    contentColumnType: text
+    fieldGroup: null
+    handle: wysiwyg
+    instructions: 'Add some rich text.'
+    name: WYSIWYG
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\redactor\Field
+handle: text_and_image
+name: 'Text and image'
+sortOrder: 2

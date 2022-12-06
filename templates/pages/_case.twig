@@ -1,6 +1,31 @@
 {% extends "layouts/_main" %}
 
 {% block container %}
-    {{ entry.title }}
-    {{ entry.description }}
+    <section>
+        {% embed "components/columns" with {
+            image: entry.image.one().url
+        } %}
+            {% block article %}
+                <h1>
+                    {{ entry.title }}
+                </h1>
+
+                <p>
+                    {{ entry.description }}
+                </p>
+            {% endblock %}
+        {% endembed %}
+    </section>
+
+    {% set blocks = entry.dynamicContent.all() %}
+
+    {% if blocks | length %}
+        <section>
+            {% for b in blocks %}
+                {% include "blocks/" ~ b.type with {
+                    post: b
+                }  %}
+            {% endfor %}
+        </section>
+    {% endif %}
 {% endblock %}

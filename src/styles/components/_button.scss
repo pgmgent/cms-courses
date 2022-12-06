@@ -2,7 +2,7 @@
 
 .button {
     background-color: v.$gray;
-    color: v.$light;
+    color: v.$dark;
     padding: v.$spacing-sm v.$spacing-base;
     border-radius: v.$radius-base;
     text-decoration: none;
@@ -10,4 +10,13 @@
 
 .button--primary {
     background-color: v.$primary;
+    color: v.$light;
+
+    &.button--active {
+        color: v.$gray;
+    }
+}
+
+.button--active {
+    color: v.$primary;
 }

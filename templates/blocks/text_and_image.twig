@@ -1,0 +1,9 @@
+{% set blck = post ?? b %}
+
+{% embed "components/columns" with {
+    image: blck.image.one().url
+} %}
+    {% block article %}
+        {{ blck.wysiwyg }}
+    {% endblock %}
+{% endembed %}

@@ -42,8 +42,38 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Content
+          -
+            elementCondition: null
+            fieldUid: f3956f49-9876-4219-95f1-e50a5d448c4b # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb8b4523-8cec-427e-bec2-9cef4704b7fd
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Basic Information'
         uid: 59058dda-16f6-426d-8e68-81888e849c8c
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f0998072-e809-4af9-82bd-c986990b6c1b # Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcd2b04d-e61c-442f-bbec-c745face2141
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Detail Content'
+        uid: 96e0670d-8c0c-4685-92cf-f695da5cfd77
         userCondition: null
 handle: detail
 hasTitleField: true
