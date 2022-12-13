@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as v;
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: v.$spacing-sm;
+}
+
+.tags__tag {
+    padding: v.$spacing-sm v.$spacing-medium;
+    border-radius: v.$radius-large;
+    border: 1px solid v.$dark;
+    text-decoration: none;
+    color: v.$dark;
+}
+
+.tags__tag--active {
+    background-color: v.$primary;
+    color: v.$light;
+}

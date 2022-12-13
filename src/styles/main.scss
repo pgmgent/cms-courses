@@ -1,9 +1,12 @@
 @use 'base/reset';
 @use 'base/typography';
+@use 'components/container';
 @use 'components/button';
+@use 'components/card';
 @use 'components/lang-item';
 @use 'components/list';
 @use 'components/logo';
+@use 'components/tag';
 @use 'layouts/columns';
 @use 'layouts/body';
 @use 'layouts/footer';

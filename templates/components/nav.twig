@@ -26,6 +26,10 @@
                 </li>
             {% endfor %}
 
+            <form action="/">
+                <input name="s" value="{{ searchInput }}" type="text"/>
+            </form>
+
             {% if currentUser and currentUser.can('accessCp') %}
                 <li class="nav__item">
                     {% include "components/button-link" with {

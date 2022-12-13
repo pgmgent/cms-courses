@@ -1,0 +1,6 @@
+{{ tag('img', {
+    src: asset.url,
+    alt: asset.title,
+    srcset: asset.getSrcset(['400w', '756w', '1000w']),
+    sizes: "(max-width: 400px) 400px, (max-width: 756px) 756px, 1000px"
+}) }}

@@ -42,8 +42,62 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: f3956f49-9876-4219-95f1-e50a5d448c4b # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: df13ba95-4322-4e88-95ce-a8dcc0f2fcb1
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: f4042756-cab8-4ff0-b95d-3b6f30b2d823
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d37b25b1-824e-4135-b890-76449a2fa51c # Meta Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b72cb89-6c0e-42f5-8272-ae3fcae01b8b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9183f06d-7d64-499c-9407-264b8c8da3b7 # Meta Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6d53a21e-09e7-4d8c-a8be-90a0686c13de
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3a0a3595-112e-4b3e-ad4a-6944df703fa9 # Meta Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a64f1f22-5216-4ff7-9720-37ae950db7f4
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: fc6d7590-da6a-4183-9386-ea2f4f45f669
         userCondition: null
 handle: homePage
 hasTitleField: true

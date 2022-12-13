@@ -1,20 +1,29 @@
 {% extends "layouts/_main" %}
 
+{% set slug = craft.app.request.getSegment(2) %}
+{% set category = craft.categories.group('projectTypes').slug(slug).one() %}
+
+{% set cases = entry is defined ? craft.entries.section('cases').all() : craft.entries.section('cases').relatedTo(category).all() %}
+{% set page = entry is defined ? entry : category %}
+
 {% block container %}
-    {{ entry.title }}
-    {{ entry.description }}
+    {% include "components/_heading" with {
+        title: page.title,
+        description: page.description
+    } %}
 
-    <ul>
-        {% for case in entry.casesSelector %}
-            <li>{{ case.title }}</li>
+    <nav class="tags">
+        {% for category in craft.categories().group('projectTypes').all() %}
+            {% include "components/_tag" with {
+                entry: category
+            } %}
         {% endfor %}
-    </ul>
-
-    <hr>
+    </nav>
 
     <ul>
-        {% for case in craft.entries.section('cases').all() %}
+        {% for case in cases %}
             {% set isDetail = case.type == 'detail' %}
+
             <li>
                 <a href="{{ isDetail ? case.url : case.externalLink }}" target="{{ isDetail ? '_self' : '_blank' }}">
                     {{ case.title }}
@@ -22,15 +31,4 @@
             </li>
         {% endfor %}
     </ul>
-
-    <ul>
-        {% for case in craft.entries.section('cases').type('detail').all() %}
-            <li>
-                <a href="{{case.url}}">
-                    {{ case.title }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-
 {% endblock %}

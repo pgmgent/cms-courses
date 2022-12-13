@@ -1,19 +1,19 @@
-columnSuffix: zvybxmvr
+columnSuffix: acfbzzau
 contentColumnType: text
-fieldGroup: 48278a33-f3ca-4301-afda-73d485b628a3 # Common
-handle: description
-instructions: 'Use a rather short description.'
-name: Description
-searchable: true
+fieldGroup: b56326ad-0db4-404a-ac6a-927ba3ec53bd # SEO
+handle: metaDescription
+instructions: null
+name: 'Meta Description'
+searchable: false
 settings:
   byteLimit: null
   charLimit: null
   code: false
   columnType: null
   initialRows: 4
-  multiline: true
+  multiline: false
   placeholder: null
-  uiMode: enlarged
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: language
 type: craft\fields\PlainText

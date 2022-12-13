@@ -1,0 +1,45 @@
+{% extends "layouts/_main" %}
+
+{% block container %}
+    {% embed "components/columns" with {
+        image: entry.image.one() ? entry.image.one().url : null
+    } %}
+        {% block article %}
+            {% include "components/_heading" with {
+                title: entry.title,
+                description: entry.description
+            } %}
+
+            <form method="post" action="">
+                {{ csrfInput() }}
+                {# {{ actionInput('/contact-form/send') }}
+                {{ redirectInput('/contact-form/thanks') }} #}
+
+                <label>
+                    <span>
+                        Naam
+                    </span>
+                    <input type="text" name="fromName"/>
+                </label>
+
+                <label>
+                    <span>
+                        Email
+                    </span>
+                    <input type="email" name="fromEmail"/>
+                </label>
+
+                <label>
+                    <span>
+                        Message
+                    </span>
+                    <input type="text" name="message"/>
+                </label>
+
+                <button type="submit">
+                    {{ 'Verzenden' | t }}
+                </button>
+            </form>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

@@ -1,4 +1,5 @@
 {% extends "layouts/_base" %}
+{% set searchInput = craft.app.request.getQueryParam('s') %}
 
 {% block content %}
     <div class="container">

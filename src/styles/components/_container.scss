@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as v;
+
+.container {
+    max-width: v.$xl;
+    margin: 0 auto;
+    padding: v.$spacing-medium;
+}
+
+.container--center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
