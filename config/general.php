@@ -40,6 +40,6 @@ return GeneralConfig::create()
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
     ->aliases([
-        '@webroot' => dirname(__DIR__) . '/web'
+        '@webroot' => dirname(__DIR__) . '/web',
     ])
 ;

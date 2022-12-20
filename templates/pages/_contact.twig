@@ -1,6 +1,16 @@
+{% import "macro/_helpers" as m %}
+
 {% extends "layouts/_main" %}
 
 {% block container %}
+    <h1>
+        Locale assets
+    </h1>
+
+    {{ m.icon('airplay') }}
+
+    <hr>
+
     {% embed "components/columns" with {
         image: entry.image.one() ? entry.image.one().url : null
     } %}

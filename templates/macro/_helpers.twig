@@ -10,3 +10,9 @@
     {% endif %}
 {% endmacro %}
 
+{% macro icon(name, classes) %}
+    {{ svg(alias('@webroot')~'/assets/icons/'~name~'.svg') | attr({
+        class: classes
+    }) }}
+{% endmacro %}
+
