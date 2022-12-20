@@ -14,7 +14,9 @@
 <meta property="og:url" content="https://metatags.io/">
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
-<meta property="og:image" content="{{ entry.metaImage.one().url }}">
+{% if entry.metaImage is defined and entry.metaImage is not empty %}
+    <meta property="og:image" content="{{ entry.metaImage.one().url }}">
+{% endif %}
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">

@@ -1,0 +1,29 @@
+defaultPlacement: end
+enableVersioning: true
+handle: articlesPage
+name: 'Articles Page'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  1af38875-d936-4360-a5d0-437ef7ad6e24: # PGM Ghent
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_articles.twig
+    uriFormat: news
+  7fbad75b-1d64-4ae6-8bf5-701ec1f995ea: # PGM Gent
+    enabledByDefault: true
+    hasUrls: true
+    template: pages/_articles.twig
+    uriFormat: nieuws
+type: single

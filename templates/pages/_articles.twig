@@ -1,0 +1,35 @@
+{% extends "layouts/_main" %}
+{% set activeTagParam = craft.app.request.getQueryParam("t") %}
+{% set tag = craft.tags().title(activeTagParam).one() %}
+{% set articles = craft.entries().section('articles').relatedTo(tag).all() %}
+
+{% block container %}
+    <h1>{{ entry.title }}</h1>
+    <p>
+        {{ entry.description }}
+    </p>
+
+    <ul>
+        {% for tag in craft.tags().group('keywords').all() %}
+            <li>
+                <a href="{{ url(entry.uri, {
+                    t: tag.title | kebab | ascii
+                }) }}">
+                    {{ tag }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+
+    <ul>
+        {% for article in articles %}
+            <li>
+                <a href="{{ article.url }}">
+                    {{ article.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,67 @@
+fieldLayouts:
+  9f902f8a-5157-4e96-aea5-b0d1ac62a277:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3bb7cc73-0ade-4740-b6e7-f4a87d5beef9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e68987c1-ae5a-48c5-a6f2-3031e10c903d # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d1f270c0-9275-405d-8f7a-9b8581938dd0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 87b02d56-2f59-4eae-9b34-8d027e4c794b # Keyword Selector
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be6931c8-aeb4-4f4c-a080-348060ad50fd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e3a8177f-3896-449c-92c4-6bc13e4c890a
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: b2a8eaae-b55e-4525-ac23-1147938c4cbc # Articles
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
